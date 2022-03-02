@@ -96,6 +96,25 @@ Target Words:
 /lock[(ed)|s]/
  **("lock" followed by "ed" or "s")**
 
+Question Starters:
+1. "Did"
+/\nDid/
+ **(the start of a newline followed by "Did")**
+2. "How much did"
+/\nHow much did/
+ **(the start of a newline followed by "How much did")**
+3. "What did"
+/\nWhat did/
+ **(the start of a newline followed by "What did")**
+4. "rise"
+/rise/
+5. "fall"
+/fall/
+6. "up"
+/up/
+7. "down"
+/down/
+
 Questions/Notes:
 - does /s (non-whitespace) include newline?
 - how to start/end searches? proper notation, is punctuation included, etc.
