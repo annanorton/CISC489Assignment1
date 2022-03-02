@@ -1,0 +1,106 @@
+Goal: produce a simple question answering (QA) system using regular expressions to retrieve information from a single news article related to the stock market
+
+system should be able to:
+- respond to a list of queries from a file (each query is on a separate line)
+  - respond to each line
+  - terminate when it reaches the end of the file
+- respond to a query from interactive console input
+  - loop until the user quits
+
+development data:
+- sample questions that system should be able to handle
+
+system training:
+- provided 2 articles for training
+- assume that each sentence in an article file appears on a separate line
+- assume that there is a blank line between each paragraph
+
+You may rely on NLP analysis tools available on the web (e.g. part-of-speech taggers, morphological analyzers) but you must indicate:
+1. which ones you use
+2. for what purpose
+3. where they were obtained
+
+GRADING
+Functionality (80pts)
+1. Functionality (42pts)
+   - correctly handle the following questions:
+     1. Did <index> rise or fall?
+     2. Did <company stock> rise or fall?
+     3. How much did <index> rise/fall?
+     4. How much did <company stock> rise/fall?
+     5. How much did <index> close/open at?
+     6. How much did <company stock> close/open at?
+   - handle paraphrases of the questions for indices
+     1. for example "Dow Jones" or "Dow Jones industrials" or "the industrial average"
+     2. verbs such as "rise" or "climb"
+   - always provide source for the answer (i.e. the sentence where the answer came from)
+   - if the file mentions any rise or fall throughout the day or in the past, you should mention it
+   - examples:
+     1. Q: How much did the Dow Jones close at?
+     	A: 2569.26
+	Source: "The Dow Jones industrials closed at 2659.26" (line 25)
+     2. Q: How much did the Industrials Average close at?
+     	A: 2569.26
+	Source: "The Dow Jones industrials closed at 2659.26" (line 25)
+     3. Q: Did Delta Airlines rise or fall?
+     	A: It fell.
+	Source: "For example, their selling caused trading halts to be declared in USAir Group, which closed down 3 7/8 to 41 1/2, Delta Air Lines, which fell 7 3/4 to 69 1/4, and Philips Industries, which sank 3 to 21 1/2." (line 43)
+     4. Q: How much did Delta Airlines drop?
+     	A: 7 3/4
+	Source:"For example, their selling caused trading halts to be declared in USAir Group, which closed down 3 7/8 to 41 1/2, Delta Air Lines, which fell 7 3/4 to 69 1/4, and Philips Industries, which sank 3 to 21 1/2." (line 43)
+2. Regular Expression Templates (8pts)
+   - have good regular expression templates for questions
+   - have good regular expression templates for answers
+   - quality over quantity
+     1. have more general regular expressions that can match multiple questions/kinds of sentences for the answer are better than rigid expressions that match only one string
+     2. more general regular expressions means fewer overall
+3. Preciseness of Answer (10pts)
+   - be as specific as possible
+     1. for example, the first answer above should be "2569.26" not "closed at 2569.26"
+4. Multiple Answers (10pts)
+   - list all possible answers
+   - will be penalized for missed answers
+   - for example:
+     Q: How much did the Dow Jones fall?
+     A1: 55
+     Source1: "The Dow Jones industrials were down 55 points at 3 p.m. before the futures-trading halt." (line 66)
+     A2: 114.73
+     Source2: "At 3:30 p.m., at the end of the "cooling off" period, the average was down 114.76 points." (line 67)
+5. No Answer Available (10pts)
+   - correctly identify when there is no answer
+   - example:
+     Q: How much did the S&P market rise?
+     A: No information available.
+6. Incorrect Answer
+   - you will be penalized for wrong answers
+   - example:
+     Q: How much did the Dow fall?
+     A: Dow Richardson
+     Source: "-- Dow Richardson." (line 5)
+Software Engineering (20pts)
+1. README.md contains
+   - names and email addresses
+   - Assignment 1
+   - a description of every file, the programming language used, supporting files, any NLP tools used, etc.
+   - how the QA system works, in detail
+   - a description of special features of the QA system
+   - a description of limitations of the QA system
+2. Code Documentation
+   - methods/functions/procedures should be documented in a meaningful way
+     1. this can mean expressive function names as well as explicit documentation
+   - informative method/function/procedure/variable names
+   - efficient implementation
+   - Programmer, Memory, and Processor efficiency
+     1. don't sacrifice one unless another is improved
+   - dont hardcode variable values, etc.
+
+SUBMISSION
+- if language requires compilation, include shell script that automatically compiles code ON EECIS MACHINE
+  - called "make.sh"
+- include simple perl wrapper called hw1.pl
+  - this is so that your program can be run as follows on the eecis machines):
+    $ perl hw1.pl <financial article> (<qa filename>)
+    - note that <qa filename> is optional, as your QA must respond to both queries from a file and interactive console input
+    - Hint: this simple perl script lists the contents of the present working directory:
+      print 'ls'
+- when system is complete, submit through canvas
