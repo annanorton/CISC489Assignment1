@@ -1,1 +1,2 @@
-# CISC489Assignment1
+#Kelsey McKiernan and Anna Norton
+#Assignment 1
