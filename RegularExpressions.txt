@@ -21,21 +21,50 @@ How much did IBM fall?
 
 KEYWORDS
 Proper Nouns:
-1. "Dow Jones Industrial Average" & "Down Jones industrials" & "Dow's" & "Dow industrials"
+1. "Dow Jones Industrial Average" & "Dow Jones industrials" & "Dow's" & "Dow industrials"
+/Dow[\s's\s] 
+  **(does this mean "Dow followed by space" OR "Dow's followed by space"? this is the goal)**
+(Jones)? 
+  **(followed by 0 or 1 instances of "Jones")**
+([Ii]ndustrial)?s? 
+  **(followed by 0 or 1 instances of "I/industrial" followed by 0 or 1 instances of "s")**
+(Average)?/
+  **(followed by 0 or 1 instances of "Average")**
 2. "Standard & Poor"
+/Standard & Poor/
 3. "UAL"
+/UAL/
 4. "AMR"
+/AMR/
 5. "BankAmerica"
+/BankAmerica/
 6. "Walt Disney"
+/Walt Disney/
 7. "Capital Cities/ABC"
-8. "Philip Morris" & "Philips Industries"
+/Capital Cities\/ABC\ 
+  **(backslash is included to denote that forwardslash is used as string not command)**
+8. "Philip Morris" & "Philips Industries" **(are these actually the same?)**
+/Philip(s?) 
+  **("Philip" followed by 0 or 1 instances of "s")**
+((Morris)|(Industries))/ 
+  **(followed by either "Morris" or "Industries")**
 9. "Pacific Telesis Group"
+/Pacific Telesis Group/
 10. "Delta Air Lines"
+/Delta Air Lines/
 11. "IBM" & "International Business Machines"
+/(IBM)|(International Business Machines)/ 
+  **("IBM" or "International Business Machines")**
 12. "S&P"
+/S&P/
 
 Nouns:
 1. "rise"
 2. "fall" & "plunged" & "down" & "loss" & "dive" & "halt" & "sank" & "losses"
 3. "-point"
 4. "closed at" & "final" & "locked"
+
+Questions/Notes:
+- does /s (non-whitespace) include newline?
+- how to start/end searches? proper notation, is punctuation included, etc.
+- is "&" a special character?
