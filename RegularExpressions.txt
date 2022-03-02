@@ -58,13 +58,46 @@ Proper Nouns:
 12. "S&P"
 /S&P/
 
-Nouns:
-1. "rise"
-2. "fall" & "plunged" & "down" & "loss" & "dive" & "halt" & "sank" & "losses"
-3. "-point"
-4. "closed at" & "final" & "locked"
+Target Words:
+1. "rise" & "rising" & "rose" & "risen"
+/r[i|o]s[e|(ing)|(en)]/ 
+ **("r" followed by "i" or "o" followed by "e" or "ing" or "en")**
+2. "fall" & "falls" & "fell" & "fallen" & "falling"
+/f[a|e]ll([s|(en)|(ing)])?/
+ **("f" followed by "a" or "e" followed by "ll" followed by 0 or 1 instances of "s" or "en" or "ing")**
+3. "plunged" & "plunges" & "plunging" & "plunge"
+/plung[(ing)|(e([d|s])?))]/ 
+ **("plung" followed by "ing" or the whole statement (!!REVIEW!!) "e" followed by 0 or 1 instances of "d" or "s")**
+4. "down" 
+/down/
+5. "loss" & "lost" & "losses" & "losing"
+/los[t|(ing)|s(es)?]/
+ **("los" followed by one of "t" or "ing" or the whole statement (!!REVIEW!!) "s" followed by 0 or 1 instances of "es")**
+6. "dive" & "dove" & "diving" & "dives" & "dived"
+/d[i|o]v[(ing)|(e[s|d]?)]/
+ **("d" followed by "i" or "o" followed by "v" followed by "ing" or the whole statement (!!REVIEW!!) "e" followed by 0 or 1 instances of "s" or "d")**
+7. "halt" & "halting" & "halted" & "halts" 
+/halt([s|ed|ing])?/
+ **("halt" followed by 0 or 1 instances of "s" or "ed" or "ing")**
+8. "sank" & "sink" & "sinking" & "sinks" & "sunk"
+/s[a|i|u]nk([(ing)|s])?/
+ **("s" followed by "a" or "i" or "u" followed by "nk" followed by 0 or 1 instances of "ing" or "s")**
+9. "-point" & "point" & "points" & "-points"
+/(-?)point(s?)/
+ **(0 or 1 instances of "-" followed by "point" followed by 0 or 1 instances of "s")**
+10. "closed" & "closes" & "closing" & "close"
+/clos([(ing)|e([d|s])?])/
+ **("clos" followed by "ing" or the whole statement (!!REVIEW!!) "e" followed by 0 or 1 instances of "d" or "s")**
+ **(if "at" needs to be added, e.g. "closes at", just add " at" to the end of the regular expression)**
+11. "final" & "finals"
+/final(s?)/
+ **("final" followed by 0 or 1 instances of "s")**
+12. "locked" & "locks"
+/lock[(ed)|s]/
+ **("lock" followed by "ed" or "s")**
 
 Questions/Notes:
 - does /s (non-whitespace) include newline?
 - how to start/end searches? proper notation, is punctuation included, etc.
-- is "&" a special character?
+- is "&" a special character? is "-" a special character?
+- difference between | and []?
