@@ -1,5 +1,5 @@
 TEST QUESTIONS
-Yes/No Questions:
+Either/Or Questions:
 Did the Dow rise or fall?
 Did Walt Disney rise or fall?
 Did Merrill Lynch rise or fall?
@@ -19,4 +19,24 @@ How much did Delta go up?
 How much did Delta go down?
 How much did IBM fall?
 
+KEYWORDS
+Proper Nouns:
+1. "Dow Jones Industrial Average" & "Down Jones industrials" & "Dow's" & "Dow industrials"
+2. "Standard & Poor"
+3. "UAL"
+4. "AMR"
+5. "BankAmerica"
+6. "Walt Disney"
+7. "Capital Cities/ABC"
+8. "Philip Morris" & "Philips Industries"
+9. "Pacific Telesis Group"
+10. "Delta Air Lines"
+11. "IBM" & "International Business Machines"
+12. "S&P"
 
+Nouns:
+1. "rise"
+2. "fall" & "plunged" & "down" & "loss" & "dive" & "halt" & "sank" & "losses"
+3. "-point"
+4. "closed at"
+5. "final" & "locked"
