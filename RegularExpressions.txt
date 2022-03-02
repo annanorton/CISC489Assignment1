@@ -38,5 +38,4 @@ Nouns:
 1. "rise"
 2. "fall" & "plunged" & "down" & "loss" & "dive" & "halt" & "sank" & "losses"
 3. "-point"
-4. "closed at"
-5. "final" & "locked"
+4. "closed at" & "final" & "locked"
