@@ -30,7 +30,7 @@ GENERIC TEST QUESTIONS:
 KEYWORDS
 Proper Nouns:
 1. "Dow Jones Industrial Average" & "Dow Jones industrials" & "Dow's" & "Dow industrials"
-/Dow[\s's\s] 
+/Dow[\s's\s] **(brackets are used for individual character disjunctions, use parens. to CAPTURE instead)**
   **(does this mean "Dow followed by space" OR "Dow's followed by space"? this is the goal)**
 (Jones)? 
   **(followed by 0 or 1 instances of "Jones")**
