@@ -1,10 +1,15 @@
 //SYSTEM.C
-#include "stdio.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include "system.h"
 
 int main() {
-  int a = 13;
-  int b = 12;
+printf("before function call\n");
+ printf("TEST VALUE IS %d\n", strcmp("?","?"));
+//char *contents = fileInput("Article1.txt");
+char *question = consoleInput();
+printf("finished function call\n");
 
-  printf("Sum is: %i ", sumOf(a,b));
+ return 0;
 }
